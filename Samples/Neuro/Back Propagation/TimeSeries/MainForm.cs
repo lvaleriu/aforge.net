@@ -10,6 +10,7 @@ using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
+using System.Globalization;
 using System.Windows.Forms;
 using System.Data;
 using System.Threading;
@@ -84,6 +85,9 @@ namespace TimeSeries
 		// Constructor
 		public MainForm( )
 		{
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
 			//
 			// Required for Windows Form Designer support
 			//
