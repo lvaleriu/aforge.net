@@ -75,7 +75,11 @@ int av_parse_color(uint8_t *rgba_color, const char *color_string, int slen,
                    void *log_ctx);
 
 /**
+<<<<<<< HEAD
  * Parses timestr and returns in *time a corresponding number of
+=======
+ * Parse timestr and return in *time a corresponding number of
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * microseconds.
  *
  * @param timeval puts here the number of microseconds corresponding

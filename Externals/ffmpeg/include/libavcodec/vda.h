@@ -23,6 +23,10 @@
 #ifndef AVCODEC_VDA_H
 #define AVCODEC_VDA_H
 
+<<<<<<< HEAD
+=======
+#include <pthread.h>
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 #include <stdint.h>
 
 // emmintrin.h is unable to compile with -std=c99 -Werror=missing-prototypes
@@ -60,7 +64,10 @@ typedef struct {
     * - decoding: Set/Unset by libavcodec.
     */
     struct vda_frame    *next_frame;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 } vda_frame;
 
 /**
@@ -92,7 +99,11 @@ struct vda_context {
     * - encoding: unused
     * - decoding: Set/Unset by libavcodec.
     */
+<<<<<<< HEAD
     void                *queue_mutex;
+=======
+    pthread_mutex_t     queue_mutex;
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
     /**
     * The frame width.
@@ -151,11 +162,16 @@ struct vda_context {
     int                 ref_size;
 };
 
+<<<<<<< HEAD
 /** Creates the video decoder. */
+=======
+/** Create the video decoder. */
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 int ff_vda_create_decoder(struct vda_context *vda_ctx,
                           uint8_t *extradata,
                           int extradata_size);
 
+<<<<<<< HEAD
 /** Destroys the video decoder. */
 int ff_vda_destroy_decoder(struct vda_context *vda_ctx);
 
@@ -163,6 +179,15 @@ int ff_vda_destroy_decoder(struct vda_context *vda_ctx);
 vda_frame *ff_vda_queue_pop(struct vda_context *vda_ctx);
 
 /** Releases the given frame. */
+=======
+/** Destroy the video decoder. */
+int ff_vda_destroy_decoder(struct vda_context *vda_ctx);
+
+/** Return the top frame of the queue. */
+vda_frame *ff_vda_queue_pop(struct vda_context *vda_ctx);
+
+/** Release the given frame. */
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 void ff_vda_release_vda_frame(vda_frame *frame);
 
 #endif /* AVCODEC_VDA_H */

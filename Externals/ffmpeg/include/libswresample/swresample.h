@@ -30,8 +30,17 @@
 #include "libavutil/samplefmt.h"
 
 #define LIBSWRESAMPLE_VERSION_MAJOR 0
+<<<<<<< HEAD
 #define LIBSWRESAMPLE_VERSION_MINOR 5
 #define LIBSWRESAMPLE_VERSION_MICRO 0
+=======
+#define LIBSWRESAMPLE_VERSION_MINOR 6
+#define LIBSWRESAMPLE_VERSION_MICRO 100
+
+#define LIBSWRESAMPLE_VERSION_INT  AV_VERSION_INT(LIBSWRESAMPLE_VERSION_MAJOR, \
+                                                  LIBSWRESAMPLE_VERSION_MINOR, \
+                                                  LIBSWRESAMPLE_VERSION_MICRO)
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
 #define SWR_CH_MAX 16   ///< Maximum number of channels
 
@@ -110,7 +119,11 @@ int swr_convert(struct SwrContext *s, uint8_t *out[SWR_CH_MAX], int out_count,
 /**
  * Activate resampling compensation.
  */
+<<<<<<< HEAD
 void swr_compensate(struct SwrContext *s, int sample_delta, int compensation_distance);
+=======
+int swr_set_compensation(struct SwrContext *s, int sample_delta, int compensation_distance);
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
 /**
  * Set a customized input channel mapping.
@@ -122,4 +135,22 @@ void swr_compensate(struct SwrContext *s, int sample_delta, int compensation_dis
  */
 int swr_set_channel_mapping(struct SwrContext *s, const int *channel_map);
 
+<<<<<<< HEAD
+=======
+/**
+ * Return the LIBSWRESAMPLE_VERSION_INT constant.
+ */
+unsigned swresample_version(void);
+
+/**
+ * Return the swr build-time configuration.
+ */
+const char *swresample_configuration(void);
+
+/**
+ * Return the swr license.
+ */
+const char *swresample_license(void);
+
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 #endif

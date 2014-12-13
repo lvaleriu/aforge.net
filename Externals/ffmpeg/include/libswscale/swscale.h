@@ -33,7 +33,11 @@
 
 #define LIBSWSCALE_VERSION_MAJOR 2
 #define LIBSWSCALE_VERSION_MINOR 1
+<<<<<<< HEAD
 #define LIBSWSCALE_VERSION_MICRO 0
+=======
+#define LIBSWSCALE_VERSION_MICRO 100
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
 #define LIBSWSCALE_VERSION_INT  AV_VERSION_INT(LIBSWSCALE_VERSION_MAJOR, \
                                                LIBSWSCALE_VERSION_MINOR, \
@@ -60,17 +64,29 @@
 #endif
 
 /**
+<<<<<<< HEAD
  * Returns the LIBSWSCALE_VERSION_INT constant.
+=======
+ * Return the LIBSWSCALE_VERSION_INT constant.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  */
 unsigned swscale_version(void);
 
 /**
+<<<<<<< HEAD
  * Returns the libswscale build-time configuration.
+=======
+ * Return the libswscale build-time configuration.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  */
 const char *swscale_configuration(void);
 
 /**
+<<<<<<< HEAD
  * Returns the libswscale license.
+=======
+ * Return the libswscale license.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  */
 const char *swscale_license(void);
 
@@ -127,7 +143,11 @@ const char *swscale_license(void);
 #define SWS_CS_DEFAULT        5
 
 /**
+<<<<<<< HEAD
  * Returns a pointer to yuv<->rgb coefficients for the given colorspace
+=======
+ * Return a pointer to yuv<->rgb coefficients for the given colorspace
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * suitable for sws_setColorspaceDetails().
  *
  * @param colorspace One of the SWS_CS_* macros. If invalid,
@@ -135,7 +155,10 @@ const char *swscale_license(void);
  */
 const int *sws_getCoefficients(int colorspace);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 // when used for filters they must have an odd number of elements
 // coeffs cannot be shared between vectors
 typedef struct {
@@ -154,26 +177,42 @@ typedef struct {
 struct SwsContext;
 
 /**
+<<<<<<< HEAD
  * Returns a positive value if pix_fmt is a supported input format, 0
+=======
+ * Return a positive value if pix_fmt is a supported input format, 0
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * otherwise.
  */
 int sws_isSupportedInput(enum PixelFormat pix_fmt);
 
 /**
+<<<<<<< HEAD
  * Returns a positive value if pix_fmt is a supported output format, 0
+=======
+ * Return a positive value if pix_fmt is a supported output format, 0
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * otherwise.
  */
 int sws_isSupportedOutput(enum PixelFormat pix_fmt);
 
 /**
+<<<<<<< HEAD
  * Allocates an empty SwsContext. This must be filled and passed to
+=======
+ * Allocate an empty SwsContext. This must be filled and passed to
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * sws_init_context(). For filling see AVOptions, options.c and
  * sws_setColorspaceDetails().
  */
 struct SwsContext *sws_alloc_context(void);
 
 /**
+<<<<<<< HEAD
  * Initializes the swscaler context sws_context.
+=======
+ * Initialize the swscaler context sws_context.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  *
  * @return zero or positive value on success, a negative value on
  * error
@@ -181,14 +220,22 @@ struct SwsContext *sws_alloc_context(void);
 int sws_init_context(struct SwsContext *sws_context, SwsFilter *srcFilter, SwsFilter *dstFilter);
 
 /**
+<<<<<<< HEAD
  * Frees the swscaler context swsContext.
+=======
+ * Free the swscaler context swsContext.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * If swsContext is NULL, then does nothing.
  */
 void sws_freeContext(struct SwsContext *swsContext);
 
 #if FF_API_SWS_GETCONTEXT
 /**
+<<<<<<< HEAD
  * Allocates and returns a SwsContext. You need it to perform
+=======
+ * Allocate and return an SwsContext. You need it to perform
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * scaling/conversion operations using sws_scale().
  *
  * @param srcW the width of the source image
@@ -210,7 +257,11 @@ struct SwsContext *sws_getContext(int srcW, int srcH, enum PixelFormat srcFormat
 #endif
 
 /**
+<<<<<<< HEAD
  * Scales the image slice in srcSlice and puts the resulting scaled
+=======
+ * Scale the image slice in srcSlice and put the resulting scaled
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * slice in the image in dst. A slice is a sequence of consecutive
  * rows in an image.
  *
@@ -235,9 +286,15 @@ struct SwsContext *sws_getContext(int srcW, int srcH, enum PixelFormat srcFormat
  *                  the destination image
  * @return          the height of the output slice
  */
+<<<<<<< HEAD
 int sws_scale(struct SwsContext *c, const uint8_t* const srcSlice[],
               const int srcStride[], int srcSliceY, int srcSliceH,
               uint8_t* const dst[], const int dstStride[]);
+=======
+int sws_scale(struct SwsContext *c, const uint8_t *const srcSlice[],
+              const int srcStride[], int srcSliceY, int srcSliceH,
+              uint8_t *const dst[], const int dstStride[]);
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
 /**
  * @param inv_table the yuv2rgb coefficients, normally ff_yuv2rgb_coeffs[x]
@@ -255,35 +312,60 @@ int sws_getColorspaceDetails(struct SwsContext *c, int **inv_table,
                              int *brightness, int *contrast, int *saturation);
 
 /**
+<<<<<<< HEAD
  * Allocates and returns an uninitialized vector with length coefficients.
+=======
+ * Allocate and return an uninitialized vector with length coefficients.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  */
 SwsVector *sws_allocVec(int length);
 
 /**
+<<<<<<< HEAD
  * Returns a normalized Gaussian curve used to filter stuff
  * quality=3 is high quality, lower is lower quality.
+=======
+ * Return a normalized Gaussian curve used to filter stuff
+ * quality = 3 is high quality, lower is lower quality.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  */
 SwsVector *sws_getGaussianVec(double variance, double quality);
 
 /**
+<<<<<<< HEAD
  * Allocates and returns a vector with length coefficients, all
+=======
+ * Allocate and return a vector with length coefficients, all
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * with the same value c.
  */
 SwsVector *sws_getConstVec(double c, int length);
 
 /**
+<<<<<<< HEAD
  * Allocates and returns a vector with just one coefficient, with
+=======
+ * Allocate and return a vector with just one coefficient, with
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * value 1.0.
  */
 SwsVector *sws_getIdentityVec(void);
 
 /**
+<<<<<<< HEAD
  * Scales all the coefficients of a by the scalar value.
+=======
+ * Scale all the coefficients of a by the scalar value.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  */
 void sws_scaleVec(SwsVector *a, double scalar);
 
 /**
+<<<<<<< HEAD
  * Scales all the coefficients of a so that their sum equals height.
+=======
+ * Scale all the coefficients of a so that their sum equals height.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  */
 void sws_normalizeVec(SwsVector *a, double height);
 void sws_convVec(SwsVector *a, SwsVector *b);
@@ -292,13 +374,21 @@ void sws_subVec(SwsVector *a, SwsVector *b);
 void sws_shiftVec(SwsVector *a, int shift);
 
 /**
+<<<<<<< HEAD
  * Allocates and returns a clone of the vector a, that is a vector
+=======
+ * Allocate and return a clone of the vector a, that is a vector
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * with the same coefficients as a.
  */
 SwsVector *sws_cloneVec(SwsVector *a);
 
 /**
+<<<<<<< HEAD
  * Prints with av_log() a textual representation of the vector a
+=======
+ * Print with av_log() a textual representation of the vector a
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * if log_level <= av_log_level.
  */
 void sws_printVec2(SwsVector *a, AVClass *log_ctx, int log_level);
@@ -312,8 +402,12 @@ SwsFilter *sws_getDefaultFilter(float lumaGBlur, float chromaGBlur,
 void sws_freeFilter(SwsFilter *filter);
 
 /**
+<<<<<<< HEAD
  * Checks if context can be reused, otherwise reallocates a new
  * one.
+=======
+ * Check if context can be reused, otherwise reallocate a new one.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  *
  * If context is NULL, just calls sws_getContext() to get a new
  * context. Otherwise, checks if the parameters are the ones already
@@ -331,7 +425,11 @@ struct SwsContext *sws_getCachedContext(struct SwsContext *context,
                                         SwsFilter *dstFilter, const double *param);
 
 /**
+<<<<<<< HEAD
  * Converts an 8bit paletted frame into a frame with a color depth of 32-bits.
+=======
+ * Convert an 8-bit paletted frame into a frame with a color depth of 32 bits.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  *
  * The output frame will have the same packed format as the palette.
  *
@@ -343,7 +441,11 @@ struct SwsContext *sws_getCachedContext(struct SwsContext *context,
 void sws_convertPalette8ToPacked32(const uint8_t *src, uint8_t *dst, int num_pixels, const uint8_t *palette);
 
 /**
+<<<<<<< HEAD
  * Converts an 8bit paletted frame into a frame with a color depth of 24 bits.
+=======
+ * Convert an 8-bit paletted frame into a frame with a color depth of 24 bits.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  *
  * With the palette format "ABCD", the destination frame ends up with the format "ABC".
  *

@@ -220,6 +220,19 @@ static av_always_inline av_const int av_popcount_c(uint32_t x)
     return (x + (x >> 16)) & 0x3F;
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Count number of bits set to one in x
+ * @param x value to count bits of
+ * @return the number of bits set to one in x
+ */
+static av_always_inline av_const int av_popcount64_c(uint64_t x)
+{
+    return av_popcount(x) + av_popcount(x >> 32);
+}
+
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 #define MKTAG(a,b,c,d) ((a) | ((b) << 8) | ((c) << 16) | ((unsigned)(d) << 24))
 #define MKBETAG(a,b,c,d) ((d) | ((c) << 8) | ((b) << 16) | ((unsigned)(a) << 24))
 
@@ -385,3 +398,9 @@ static av_always_inline av_const int av_popcount_c(uint32_t x)
 #ifndef av_popcount
 #   define av_popcount      av_popcount_c
 #endif
+<<<<<<< HEAD
+=======
+#ifndef av_popcount64
+#   define av_popcount64    av_popcount64_c
+#endif
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd

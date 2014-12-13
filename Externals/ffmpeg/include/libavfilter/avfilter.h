@@ -27,6 +27,7 @@
 #include "libavutil/samplefmt.h"
 #include "libavutil/pixfmt.h"
 #include "libavutil/rational.h"
+<<<<<<< HEAD
 
 #define LIBAVFILTER_VERSION_MAJOR  2
 #define LIBAVFILTER_VERSION_MINOR 50
@@ -39,6 +40,10 @@
                                            LIBAVFILTER_VERSION_MINOR,   \
                                            LIBAVFILTER_VERSION_MICRO)
 #define LIBAVFILTER_BUILD       LIBAVFILTER_VERSION_INT
+=======
+#include "libavcodec/avcodec.h"
+
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
 #ifndef FF_API_OLD_VSINK_API
 #define FF_API_OLD_VSINK_API        (LIBAVFILTER_VERSION_MAJOR < 3)
@@ -49,6 +54,11 @@
 
 #include <stddef.h>
 
+<<<<<<< HEAD
+=======
+#include "libavfilter/version.h"
+
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 /**
  * Return the LIBAVFILTER_VERSION_INT constant.
  */

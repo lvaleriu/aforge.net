@@ -58,7 +58,11 @@ int av_expr_parse_and_eval(double *res, const char *s,
  * Parse an expression.
  *
  * @param expr a pointer where is put an AVExpr containing the parsed
+<<<<<<< HEAD
  * value in case of successfull parsing, or NULL otherwise.
+=======
+ * value in case of successful parsing, or NULL otherwise.
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * The pointed to AVExpr must be freed with av_expr_free() by the user
  * when it is not needed anymore.
  * @param s expression as a zero terminated string, for example "1+2^3+5*5+sin(2/3)"

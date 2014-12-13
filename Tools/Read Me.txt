@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * IPPrototyper
   - Information about the tool:
     http://www.aforgenet.com/framework/tools/ipprototyper.html
@@ -8,3 +9,15 @@
 * Debugger Visualizers
   - Information about the tool:
     http://www.aforgenet.com/framework/tools/debug_visualizer.html
+=======
+* IPPrototyper
+  - Information about the tool:
+    http://www.aforgenet.com/framework/tools/ipprototyper.html
+    
+  - Sample of the tool usage can be found in "Samples/Imaging/IPPrototyper Sample"
+
+
+* Debugger Visualizers
+  - Information about the tool:
+    http://www.aforgenet.com/framework/tools/debug_visualizer.html
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd

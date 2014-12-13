@@ -45,6 +45,10 @@
 #endif
 
 #define AVERROR_BSF_NOT_FOUND      (-MKTAG(0xF8,'B','S','F')) ///< Bitstream filter not found
+<<<<<<< HEAD
+=======
+#define AVERROR_BUG                (-MKTAG( 'B','U','G','!')) ///< Internal bug, also see AVERROR_BUG2
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 #define AVERROR_DECODER_NOT_FOUND  (-MKTAG(0xF8,'D','E','C')) ///< Decoder not found
 #define AVERROR_DEMUXER_NOT_FOUND  (-MKTAG(0xF8,'D','E','M')) ///< Demuxer not found
 #define AVERROR_ENCODER_NOT_FOUND  (-MKTAG(0xF8,'E','N','C')) ///< Encoder not found
@@ -59,6 +63,15 @@
 #define AVERROR_STREAM_NOT_FOUND   (-MKTAG(0xF8,'S','T','R')) ///< Stream not found
 
 /**
+<<<<<<< HEAD
+=======
+ * This is semantically identical to AVERROR_BUG
+ * it has been introduced in Libav after our AVERROR_BUG and with a modified value.
+ */
+#define AVERROR_BUG2               (-MKTAG( 'B','U','G',' '))
+
+/**
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
  * Put a description of the AVERROR code errnum in errbuf.
  * In case of failure the global variable errno is set to indicate the
  * error. Even in case of failure av_strerror() will print a generic

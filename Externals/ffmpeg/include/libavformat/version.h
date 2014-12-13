@@ -21,11 +21,25 @@
 #ifndef AVFORMAT_VERSION_H
 #define AVFORMAT_VERSION_H
 
+<<<<<<< HEAD
 #include "libavutil/avutil.h"
 
 #define LIBAVFORMAT_VERSION_MAJOR 53
 #define LIBAVFORMAT_VERSION_MINOR 22
 #define LIBAVFORMAT_VERSION_MICRO  0
+=======
+/**
+ * @file
+ * @ingroup libavf
+ * Libavformat version macros
+ */
+
+#include "libavutil/avutil.h"
+
+#define LIBAVFORMAT_VERSION_MAJOR 53
+#define LIBAVFORMAT_VERSION_MINOR 31
+#define LIBAVFORMAT_VERSION_MICRO 100
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
 #define LIBAVFORMAT_VERSION_INT AV_VERSION_INT(LIBAVFORMAT_VERSION_MAJOR, \
                                                LIBAVFORMAT_VERSION_MINOR, \
@@ -44,9 +58,12 @@
 #ifndef FF_API_OLD_METADATA2
 #define FF_API_OLD_METADATA2           (LIBAVFORMAT_VERSION_MAJOR < 54)
 #endif
+<<<<<<< HEAD
 #ifndef FF_API_READ_SEEK
 #define FF_API_READ_SEEK               (LIBAVFORMAT_VERSION_MAJOR < 54)
 #endif
+=======
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 #ifndef FF_API_OLD_AVIO
 #define FF_API_OLD_AVIO                (LIBAVFORMAT_VERSION_MAJOR < 54)
 #endif
@@ -116,5 +133,14 @@
 #ifndef FF_API_OLD_INTERRUPT_CB
 #define FF_API_OLD_INTERRUPT_CB        (LIBAVFORMAT_VERSION_MAJOR < 54)
 #endif
+<<<<<<< HEAD
+=======
+#ifndef FF_API_SET_PTS_INFO
+#define FF_API_SET_PTS_INFO            (LIBAVFORMAT_VERSION_MAJOR < 54)
+#endif
+#ifndef FF_API_CLOSE_INPUT_FILE
+#define FF_API_CLOSE_INPUT_FILE        (LIBAVFORMAT_VERSION_MAJOR < 55)
+#endif
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 
 #endif /* AVFORMAT_VERSION_H */

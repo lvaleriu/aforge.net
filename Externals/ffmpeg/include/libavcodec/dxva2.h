@@ -25,6 +25,10 @@
 
 #include <stdint.h>
 
+<<<<<<< HEAD
+=======
+#include <d3d9.h>
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 #include <dxva2api.h>
 
 #define FF_DXVA2_WORKAROUND_SCALING_LIST_ZIGZAG 1 ///< Work around for DXVA2 and old UVD/UVD+ ATI video cards

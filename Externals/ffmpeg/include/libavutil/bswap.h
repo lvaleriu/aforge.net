@@ -65,15 +65,20 @@ static av_always_inline av_const uint16_t av_bswap16(uint16_t x)
 #ifndef av_bswap32
 static av_always_inline av_const uint32_t av_bswap32(uint32_t x)
 {
+<<<<<<< HEAD
     x= ((x<<8)&0xFF00FF00) | ((x>>8)&0x00FF00FF);
     x= (x>>16) | (x<<16);
     return x;
+=======
+    return AV_BSWAP32C(x);
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 }
 #endif
 
 #ifndef av_bswap64
 static inline uint64_t av_const av_bswap64(uint64_t x)
 {
+<<<<<<< HEAD
 #if 0
     x= ((x<< 8)&0xFF00FF00FF00FF00ULL) | ((x>> 8)&0x00FF00FF00FF00FFULL);
     x= ((x<<16)&0xFFFF0000FFFF0000ULL) | ((x>>16)&0x0000FFFF0000FFFFULL);
@@ -88,6 +93,9 @@ static inline uint64_t av_const av_bswap64(uint64_t x)
     r.l[1] = av_bswap32 (w.l[0]);
     return r.ll;
 #endif
+=======
+    return (uint64_t)av_bswap32(x) << 32 | av_bswap32(x >> 32);
+>>>>>>> 17cbabfd02121ea58e8559f7fcfffdf33cf9e7fd
 }
 #endif
 
